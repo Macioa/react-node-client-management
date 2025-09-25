@@ -146,12 +146,16 @@ export const getUser = (userId) => async (dispatch) => {
         dispatch(error(err.message))
     }
 }
-export const createClient = (clientData) => async (dispatch) => {
+export const createClient = (clientData, setOpen) => async (dispatch) => {
     try {
         dispatch(start())
         const { data } = await api.createClient(clientData)
         dispatch(createClientReducer(data.result))
-        navigate('/clients')
+        if (setOpen) {
+            setOpen(false)
+        } else {
+            navigate('/clients')
+        }
         dispatch(end())
     } catch (err) {
         const message = err?.response?.data?.message || err?.message || "Something went wrong"
