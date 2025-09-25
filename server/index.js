@@ -30,7 +30,14 @@ const CONNECTION_URL = process.env.ATLAS_URL
 // const CONNECTION_URL = process.env.COMPASS_URL
 
 const PORT = process.env.PORT || 4000
-app.use(cors())
+
+// Configure CORS for Docker containers
+const corsOptions = {
+    origin: ['http://localhost:3000', 'http://client:5173', 'http://client:3000'],
+    credentials: true,
+    optionsSuccessStatus: 200
+}
+app.use(cors(corsOptions))
 app.use(express.json())
 
 // serving static files | images
