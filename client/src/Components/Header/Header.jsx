@@ -273,7 +273,7 @@ const Header = () => {
           </IconButton>
 
           <Typography className="text-red-400" variant="h6">
-            <TimerOutlined className="mb-1" /> {date.toLocaleTimeString()}
+            <TimerOutlined className="mb-1" /> {date.toLocaleTimeString()} ({Intl.DateTimeFormat().resolvedOptions().timeZone})
           </Typography>
 
           <Tooltip title="Timer" arrow placement="bottom">
