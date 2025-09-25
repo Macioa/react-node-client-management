@@ -1,12 +1,32 @@
-# Test
+## Quick Start with Docker
 
-1. Display time zone on top bar.
-2. When create new Employee, display form validation message(under each field) instead of alert if some fields are empty
-3. Add client button and modal.
-4. Add client edit feature.
+### Prerequisites
+- **Docker**: Install Docker Desktop from [https://www.docker.com/products/docker-desktop](https://www.docker.com/products/docker-desktop)
+- **Docker Compose**: Usually included with Docker Desktop
+
+### Installation Steps
+
+1. **Install Docker Desktop**:
+
+2. **Clone and Setup**:
+   ```bash
+   git clone https://github.com/Macioa/react-node-client-management.git
+   cd react-node-client-management
+   ```
+
+3. **Build and Run with Docker Compose**:
+   ```bash
+   docker compose build
+   docker compose up
+   ```
+
+4. **Access the Application**:
+   - Frontend: http://localhost:3000
+   - Backend API: http://localhost:5000
+
 
 ## Required:
- Node.js 18+
+ Node.js 18+ (for local development without Docker)
 
 # GrowCRM: Real Estate Agency Management System
 
